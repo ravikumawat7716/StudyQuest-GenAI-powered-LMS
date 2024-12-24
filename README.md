@@ -1,93 +1,122 @@
-# AI Powered LMS
+# AI-Powered LMS
 
-<img src="https://raw.githubusercontent.com/ravikumawat7716/soft-engg-project-may-2024-se-may-23/main/frontend/public/SE%20Team%2023%20.jpg?token=GHSAT0AAAAAACWMK2EEDYU6VGHUSKBD2PSMZXHLOLQ">
+<img src="https://raw.githubusercontent.com/ravikumawat7716/soft-engg-project-may-2024-se-may-23/main/frontend/public/SE%20Team%2023%20.jpg?token=GHSAT0AAAAAACWMK2EEDYU6VGHUSKBD2PSMZXHLOLQ" alt="SE Team 23">
 
 ## Local Project Setup
 
-**Prerequisites:**
+### **Prerequisites**
 
-- **Git**: Ensure you have Git installed. If not, download and install it from [https://git-scm.com/](https://git-scm.com/).
-- **Python**: Make sure you have Python 3.x installed. You can download it from [https://www.python.org/downloads/](https://www.python.org/downloads/).
-- **Node.js**: You'll need Node.js and npm for the frontend. Download and install them from [https://nodejs.org/](https://nodejs.org/).
+Ensure you have the following tools installed:
 
-**Steps:**
+- **Git**: Download and install it from [Git's official site](https://git-scm.com/).
+- **Python 3.x**: Download and install it from [Python's official site](https://www.python.org/downloads/).
+- **Node.js**: Download and install it from [Node.js official site](https://nodejs.org/).
 
-1. **Clone the Repository:**
-   - Open your terminal and run the following command to clone the repository to your local machine:
-     ```
-     git clone https://github.com/ravikumawat7716/soft-engg-project-may-2024-se-may-23.git
-     ```
+---
 
-### Backend Setup:
+### **Steps**
 
-- If you want to use your System's Global Python Environment then you can skip step 2 & 3 (Recommeded to make venv)
+#### **1. Clone the Repository**
 
-2. **Create a Virtual Environment:**
+Open your terminal and run the following command to clone the repository to your local machine:
+```bash
+git clone https://github.com/ravikumawat7716/StudyQuest-GenAI-powered-LMS.git
+```
 
-   - In the `backend` folder, create a virtual environment with the following command:
-     ```
-     python3 -m venv venv
-     ```
+#### **2. Backend Setup**
 
-3. **Activate the Virtual Environment:**
+If you prefer to use your system's global Python environment, you can skip steps 2 and 3. However, using a virtual environment is recommended.
 
-   - Activate the virtual environment based on your operating system:
-     - On Linux:
-       ```
-       source ./venv/bin/activate
-       ```
-     - On Windows:
-       ```
-       .\venv\Scripts\activate
-       ```
+**Step 2.1: Create a Virtual Environment**
 
-4. **Install Backend Dependencies:**
+- Navigate to the `backend` folder and create a virtual environment:
+  ```bash
+  python3 -m venv venv
+  ```
 
-   - Install the required Python packages using pip:
-     ```
-     pip install -r requirements.txt
-     ```
+**Step 2.2: Activate the Virtual Environment**
 
-5. **Start the Backend Server:**
-   - Run the backend server using:
-     ```
-     python main.py
-     ```
+- Activate the virtual environment based on your operating system:
+  - On Linux/Mac:
+    ```bash
+    source ./venv/bin/activate
+    ```
+  - On Windows:
+    ```bash
+    .\venv\Scripts\activate
+    ```
 
-# Ollama Installation and Running Qwen-2-0.5B
+**Step 2.3: Install Backend Dependencies**
 
-## Step 1: Download and Install Ollama
+- Install the required Python packages using pip:
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+**Step 2.4: Configure MongoDB**
+
+- Update the MongoDB URI in the `backend/model/connection.py` file with your MongoDB connection string.
+
+**Step 2.5: Start the Backend Server**
+
+- Run the backend server using:
+  ```bash
+  python main.py
+  ```
+
+---
+
+#### **3. Ollama Installation and Running Qwen-2-0.5B**
+
+**Step 3.1: Download and Install Ollama**
 
 1. Visit the [Ollama download page for Windows](https://www.ollama.com/download/windows).
 2. Download the installer and follow the on-screen instructions to complete the installation.
 
-## Step 2: Run the given command in Terminal:
+**Step 3.2: Run the Qwen-2 Model**
 
-```
-    ollama run qwen2:0.5b
-```
+- Open your terminal and execute:
+  ```bash
+  ollama run qwen2:0.5b
+  ```
 
-This will download the Qwen2 model and run it.
+This will download the Qwen-2 model and run it.
 
-### Frontend Setup:
+---
 
-12. **Navigate to the Frontend Directory:**
+#### **4. Frontend Setup**
 
-    - In your terminal, navigate to the `frontend` directory within the project folder.
+**Step 4.1: Firebase Configuration**
 
-13. **Install Frontend Dependencies:**
+- Create a new Firebase project in the [Firebase Console](https://console.firebase.google.com/).
+- Update the Firebase configuration in the following files:
+  - `frontend/src/config.js`
+  - `frontend/src/firebase.js`
 
-    - Install the required Node.js packages by running:
-      ```
-      npm install
-      ```
+**Step 4.2: Install Frontend Dependencies**
 
-14. **Run the Application:**
-    - Start the frontend application by running:
-      ```
-      npm run dev
-      ```
+- Navigate to the `frontend` directory:
+  ```bash
+  cd frontend
+  ```
+- Install the required Node.js packages:
+  ```bash
+  npm install
+  ```
 
-You're now ready to use the application locally. Access it in your web browser at [http://localhost:5173/](http://localhost:5173/).
+**Step 4.3: Run the Frontend Application**
 
-Now you can start development process.
+- Start the frontend application:
+  ```bash
+  npm run dev
+  ```
+- Access the application in your web browser at [http://localhost:5173/](http://localhost:5173/).
+
+---
+
+### **Development Process**
+
+You are now ready to start the development process for the AI-Powered LMS application. Use the following URLs:
+
+- **Frontend**: [http://localhost:5173/](http://localhost:5173/)
+- **Backend**: [http://localhost:5000/](http://localhost:5000/)
